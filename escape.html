@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tips 101: An Escape Plan</title>
+    <style>
+        body {
+            font-family: 'Courier New', Courier, monospace;
+            background-color: #1e1e1e;
+            color: #f5f5f5;
+            line-height: 1.6;
+            margin: 20px;
+            padding: 20px;
+        }
+        h1 {
+            color: #f5f5f5;
+        }
+        #typewriter {
+            border-right: 2px solid;
+            white-space: nowrap;
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+    <h1>Tips 101: An Escape Plan</h1>
+    <div id="typewriter"></div>
+    <script>
+        const text = `
+        1. Study the Map and Know the Location
+
+        Understanding your surroundings is crucial for any escape plan. Spend time studying the map of the area, noting all the exits, potential obstacles, and safe zones. Familiarize yourself with the geography so you can navigate it even in stressful situations. Knowing your location in detail can give you a significant advantage when planning your escape route.
+
+        2. Avoid Making Unnecessary Connections
+
+        In high-stakes scenarios, trust can be a rare commodity. Limit interactions and avoid forming connections that could compromise your plans. Stay focused on your goal and be cautious of who you share information with. Loose lips can sink ships, and in an escape plan, unnecessary connections can lead to potential risks and exposures.
+
+        Remember, a well-thought-out escape plan requires careful preparation, awareness, and discretion. By following these tips, you can increase your chances of success.
+        `;
+        let i = 0;
+        const speed = 50;  // typing speed in milliseconds
+        function typeWriter() {
+            if (i < text.length) {
+                document.getElementById("typewriter").innerHTML += text.charAt(i);
+                i++;
+                setTimeout(typeWriter, speed);
+            }
+        }
+        typeWriter();
+    </script>
+</body>
+</html>
